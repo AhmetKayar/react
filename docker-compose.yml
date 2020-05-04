@@ -14,6 +14,7 @@ services:
     networks:
       - proxy
     labels:
+      - "traefik.docker.network=proxy"
       - "traefik.enable=true"
       - "traefik.http.routers.turkiyeokureact.rule=Host(`react.turkiyeoku.com`)"
       - "traefik.http.routers.turkiyeokureact.entrypoints=https"
