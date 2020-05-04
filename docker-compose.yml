@@ -1,7 +1,7 @@
 version: '3'
 
 services:
-  react-app:
+  turkiyeokureact:
     image: turkiyeokureact:latest
     deploy:
       restart_policy:

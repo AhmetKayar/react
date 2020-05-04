@@ -8,7 +8,7 @@ COPY package.json /usr/src/app/package.json
 
 # Install yarn then install deps
 RUN npm install yarn -g
-RUN yarn install react-scripts -g
+RUN yarn global add react-scripts
 RUN yarn install
 COPY . /usr/src/app
 
