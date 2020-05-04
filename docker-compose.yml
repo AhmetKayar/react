@@ -2,7 +2,7 @@ version: '3'
 
 services:
   turkiyeokureact:
-    image: turkiyeokureact:latest
+    image: reactappturkiyeoku:latest
     deploy:
       restart_policy:
         condition: "any"
