@@ -66,7 +66,7 @@ pipeline {
             def stacks = new groovy.json.JsonSlurper().parseText(stackResponse.getContent())
 
             stacks.each { stack ->
-              if(stack.Name == "BOILERPLATE") {
+              if(stack.Name == "TURKIYEOKU") {
                 existingStackId = stack.Id
               }
             }
@@ -97,7 +97,7 @@ pipeline {
             def swarmInfo = new groovy.json.JsonSlurper().parseText(swarmResponse.getContent())
 
             createStackJson = """
-              {"Name": "BOILERPLATE", "SwarmID": "$swarmInfo.ID", "RepositoryURL": "https://github.com/$GITHUB_USERNAME/react", "ComposeFilePathInRepository": "docker-compose.yml", "RepositoryAuthentication": true, "RepositoryUsername": "$GITHUB_USERNAME", "RepositoryPassword": "$GITHUB_PASSWORD"}
+              {"Name": "TURKIYEOKU", "SwarmID": "$swarmInfo.ID", "RepositoryURL": "https://github.com/$GITHUB_USERNAME/react", "ComposeFilePathInRepository": "docker-compose.yml", "RepositoryAuthentication": true, "RepositoryUsername": "$GITHUB_USERNAME", "RepositoryPassword": "$GITHUB_PASSWORD"}
             """
 
           }
