@@ -15,9 +15,9 @@ services:
       - proxy
     labels:
       - "traefik.enable=true"
-      - "traefik.http.routers.reactapp.rule=Host(`react.turkiyeoku.com`)"
-      - "traefik.http.routers.reactapp.entrypoints=https"
-      - "traefik.http.routers.reactapp.tls.certresolver=http"
+      - "traefik.http.routers.turkiyeokureact.rule=Host(`react.turkiyeoku.com`)"
+      - "traefik.http.routers.turkiyeokureact.entrypoints=https"
+      - "traefik.http.routers.turkiyeokureact.tls.certresolver=http"
 
 networks:
   proxy:
